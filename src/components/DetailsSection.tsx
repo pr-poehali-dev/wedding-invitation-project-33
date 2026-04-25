@@ -71,8 +71,8 @@ export const DetailsSection = () => {
           <DetailCard
             icon="Clock"
             label="Время начала"
-            value="16:00"
-            sub="Сбор гостей с 15:30"
+            value="16:30"
+            sub="Сбор гостей с 16:00"
           />
           <DetailCard
             icon="MapPin"

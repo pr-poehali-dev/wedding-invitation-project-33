@@ -89,7 +89,7 @@ const CountdownUnit = ({ value, label }: { value: number; label: string }) => (
 );
 
 export const HeroSection = () => {
-  const countdown = useCountdown("2026-07-23T16:00:00");
+  const countdown = useCountdown("2026-07-23T16:30:00");
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div

@@ -56,22 +56,22 @@ export const ProgramSection = () => {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 overflow-hidden" style={{ background: "hsl(345,8%,16%)" }}>
-      <div className="absolute top-0 left-0 w-full h-px" style={{ background: "linear-gradient(90deg, transparent, hsl(345,65%,42%), transparent)" }} />
-      <div className="absolute bottom-0 left-0 w-full h-px" style={{ background: "linear-gradient(90deg, transparent, hsl(345,65%,42%), transparent)" }} />
+    <section className="relative py-24 overflow-hidden" style={{ background: "hsl(36,28%,91%)" }}>
+      <div className="absolute top-0 left-0 w-full h-px" style={{ background: "linear-gradient(90deg, transparent, hsl(345,60%,40%), transparent)" }} />
+      <div className="absolute bottom-0 left-0 w-full h-px" style={{ background: "linear-gradient(90deg, transparent, hsl(345,60%,40%), transparent)" }} />
 
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="flex items-center gap-3 justify-center mb-4">
-            <div className="h-px w-8" style={{ background: "hsl(345,65%,42%)" }} />
-            <p className="text-xs tracking-[0.4em] uppercase font-sans-light" style={{ color: "hsl(345,65%,42%)" }}>
+            <div className="h-px w-8" style={{ background: "hsl(345,60%,40%)" }} />
+            <p className="text-xs tracking-[0.4em] uppercase font-sans-light" style={{ color: "hsl(345,60%,40%)" }}>
               программа вечера
             </p>
-            <div className="h-px w-8" style={{ background: "hsl(345,65%,42%)" }} />
+            <div className="h-px w-8" style={{ background: "hsl(345,60%,40%)" }} />
           </div>
           <h2
             className="font-serif-display font-light"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "hsl(0,20%,92%)" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "hsl(345,20%,18%)" }}
           >
             Расписание
           </h2>
@@ -80,7 +80,7 @@ export const ProgramSection = () => {
         <div className="relative">
           <div
             className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 hidden md:block"
-            style={{ background: "linear-gradient(to bottom, transparent, hsl(345,65%,42%,0.3), transparent)" }}
+            style={{ background: "linear-gradient(to bottom, transparent, hsl(345,60%,40%,0.3), transparent)" }}
           />
 
           <div className="space-y-4 md:space-y-0">
@@ -100,29 +100,29 @@ export const ProgramSection = () => {
                     <div
                       className="p-5 rounded-sm border transition-all duration-300"
                       style={{
-                        borderColor: isActive ? "hsl(345,65%,42%)" : "hsl(345,12%,20%)",
-                        background: isActive ? "hsl(345,65%,42%,0.06)" : "hsl(345,8%,18%)",
+                        borderColor: isActive ? "hsl(345,60%,40%)" : "hsl(36,20%,80%)",
+                        background: isActive ? "hsl(345,60%,40%,0.06)" : "hsl(36,25%,97%)",
                       }}
                     >
                       <div className={`flex items-center gap-3 mb-2 ${isEven ? "md:justify-end" : ""}`}>
                         <span className="text-2xl">{item.icon}</span>
                         <span
                           className="text-sm font-sans-light tracking-widest"
-                          style={{ color: "hsl(345,65%,42%)" }}
+                          style={{ color: "hsl(345,60%,40%)" }}
                         >
                           {item.time}
                         </span>
                       </div>
                       <h3
                         className="font-serif-display font-light text-lg mb-1"
-                        style={{ color: "hsl(0,20%,92%)" }}
+                        style={{ color: "hsl(345,20%,18%)" }}
                       >
                         {item.title}
                       </h3>
                       <p
                         className="text-sm font-sans-light leading-relaxed transition-all duration-300"
                         style={{
-                          color: "hsl(0,10%,55%)",
+                          color: "hsl(345,10%,38%)",
                           maxHeight: isActive ? "100px" : "0",
                           overflow: "hidden",
                           opacity: isActive ? 1 : 0,
@@ -136,9 +136,9 @@ export const ProgramSection = () => {
                   <div
                     className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center w-3 h-3 rounded-full z-10"
                     style={{
-                      background: isActive ? "hsl(345,65%,42%)" : "hsl(345,10%,14%)",
-                      border: "2px solid hsl(345,65%,42%)",
-                      boxShadow: isActive ? "0 0 12px hsl(345,65%,42%,0.5)" : "none",
+                      background: isActive ? "hsl(345,60%,40%)" : "hsl(36,33%,94%)",
+                      border: "2px solid hsl(345,60%,40%)",
+                      boxShadow: isActive ? "0 0 12px hsl(345,60%,40%,0.5)" : "none",
                     }}
                   />
                 </div>
@@ -149,7 +149,7 @@ export const ProgramSection = () => {
 
         <p
           className="text-center text-xs font-sans-light mt-10 tracking-wider"
-          style={{ color: "hsl(0,10%,40%)" }}
+          style={{ color: "hsl(345,10%,42%)" }}
         >
           нажмите на пункт программы, чтобы узнать подробнее
         </p>

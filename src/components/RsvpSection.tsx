@@ -16,10 +16,10 @@ export const RsvpSection = () => {
   };
 
   const inputStyle: React.CSSProperties = {
-    background: "hsl(345,8%,18%)",
-    border: "1px solid hsl(345,12%,20%)",
+    background: "hsl(36,25%,97%)",
+    border: "1px solid hsl(36,20%,80%)",
     borderRadius: "2px",
-    color: "hsl(45,30%,92%)",
+    color: "hsl(345,20%,18%)",
     padding: "12px 16px",
     width: "100%",
     fontFamily: "Montserrat, sans-serif",
@@ -30,65 +30,63 @@ export const RsvpSection = () => {
   };
 
   const focusStyle = {
-    borderColor: "hsl(345,65%,42%)",
+    borderColor: "hsl(345,60%,40%)",
   };
 
   return (
     <section
       className="relative py-24 overflow-hidden"
-      style={{ background: "hsl(345,10%,14%)" }}
+      style={{ background: "hsl(36,33%,94%)" }}
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute -top-24 -right-24 w-96 h-96 rounded-full blur-3xl"
-          style={{ background: "hsl(345,65%,42%,0.04)" }}
+          className="absolute -top-24 -right-24 w-96 h-96 rounded-full blur-3xl opacity-20 bg-rose-300"
         />
         <div
-          className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full blur-3xl"
-          style={{ background: "hsl(345,65%,42%,0.04)" }}
+          className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full blur-3xl opacity-20 bg-rose-200"
         />
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice">
-          <rect x="150" y="50" width="700" height="600" rx="2" stroke="hsl(345,65%,42%)" strokeWidth="0.5" strokeOpacity="0.08" fill="none" />
-          <rect x="170" y="70" width="660" height="560" rx="2" stroke="hsl(345,65%,42%)" strokeWidth="0.3" strokeOpacity="0.05" fill="none" />
-          <line x1="0" y1="350" x2="1000" y2="350" stroke="hsl(345,65%,42%)" strokeWidth="0.3" strokeOpacity="0.05" />
-          <line x1="500" y1="0" x2="500" y2="700" stroke="hsl(345,65%,42%)" strokeWidth="0.3" strokeOpacity="0.05" />
+          <rect x="150" y="50" width="700" height="600" rx="2" stroke="hsl(345,60%,40%)" strokeWidth="0.5" strokeOpacity="0.08" fill="none" />
+          <rect x="170" y="70" width="660" height="560" rx="2" stroke="hsl(345,60%,40%)" strokeWidth="0.3" strokeOpacity="0.05" fill="none" />
+          <line x1="0" y1="350" x2="1000" y2="350" stroke="hsl(345,60%,40%)" strokeWidth="0.3" strokeOpacity="0.05" />
+          <line x1="500" y1="0" x2="500" y2="700" stroke="hsl(345,60%,40%)" strokeWidth="0.3" strokeOpacity="0.05" />
         </svg>
       </div>
 
       <div className="relative z-10 max-w-2xl mx-auto px-6">
         <div className="text-center mb-12">
           <div className="flex items-center gap-3 justify-center mb-4">
-            <div className="h-px w-8" style={{ background: "hsl(345,65%,42%)" }} />
-            <p className="text-xs tracking-[0.4em] uppercase font-sans-light" style={{ color: "hsl(345,65%,42%)" }}>
+            <div className="h-px w-8" style={{ background: "hsl(345,60%,40%)" }} />
+            <p className="text-xs tracking-[0.4em] uppercase font-sans-light" style={{ color: "hsl(345,60%,40%)" }}>
               подтверждение
             </p>
-            <div className="h-px w-8" style={{ background: "hsl(345,65%,42%)" }} />
+            <div className="h-px w-8" style={{ background: "hsl(345,60%,40%)" }} />
           </div>
           <h2
             className="font-serif-display font-light mb-4"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "hsl(0,20%,92%)" }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "hsl(345,20%,18%)" }}
           >
             RSVP
           </h2>
-          <p className="font-sans-light text-sm leading-relaxed" style={{ color: "hsl(0,10%,55%)" }}>
+          <p className="font-sans-light text-sm leading-relaxed" style={{ color: "hsl(345,10%,38%)" }}>
             Пожалуйста, подтвердите своё присутствие<br />
-            до <span style={{ color: "hsl(345,65%,42%)" }}>1 июня 2026 года</span>
+            до <span style={{ color: "hsl(345,60%,40%)" }}>1 июня 2026 года</span>
           </p>
         </div>
 
         {submitted ? (
           <div
             className="text-center py-16 px-8 rounded-sm border"
-            style={{ borderColor: "hsl(345,65%,42%,0.3)", background: "hsl(345,65%,42%,0.04)" }}
+            style={{ borderColor: "hsl(345,60%,40%,0.3)", background: "hsl(345,60%,40%,0.04)" }}
           >
             <div className="text-5xl mb-6">✨</div>
             <h3
               className="font-serif-display font-light text-3xl mb-4"
-              style={{ color: "hsl(0,20%,92%)" }}
+              style={{ color: "hsl(345,20%,18%)" }}
             >
               {attend === "yes" ? "Ждём вас!" : "Будем скучать"}
             </h3>
-            <p className="font-sans-light text-sm" style={{ color: "hsl(0,10%,55%)" }}>
+            <p className="font-sans-light text-sm" style={{ color: "hsl(345,10%,38%)" }}>
               {attend === "yes"
                 ? "Спасибо! Ваш ответ принят. Увидимся 23 июля!"
                 : "Спасибо за ответ. Будем рады видеть вас в следующий раз!"}
@@ -99,7 +97,7 @@ export const RsvpSection = () => {
             <div>
               <label
                 className="block text-xs tracking-[0.2em] uppercase mb-2 font-sans-light"
-                style={{ color: "hsl(345,50%,60%)" }}
+                style={{ color: "hsl(345,50%,45%)" }}
               >
                 Ваше имя
               </label>
@@ -110,7 +108,7 @@ export const RsvpSection = () => {
                 placeholder="Иван Иванов"
                 style={inputStyle}
                 onFocus={(e) => Object.assign(e.target.style, focusStyle)}
-                onBlur={(e) => Object.assign(e.target.style, { borderColor: "hsl(345,12%,20%)" })}
+                onBlur={(e) => Object.assign(e.target.style, { borderColor: "hsl(36,20%,80%)" })}
                 required
               />
             </div>
@@ -118,7 +116,7 @@ export const RsvpSection = () => {
             <div>
               <label
                 className="block text-xs tracking-[0.2em] uppercase mb-3 font-sans-light"
-                style={{ color: "hsl(345,50%,60%)" }}
+                style={{ color: "hsl(345,50%,45%)" }}
               >
                 Вы придёте?
               </label>
@@ -130,9 +128,9 @@ export const RsvpSection = () => {
                     onClick={() => setAttend(val)}
                     className="py-3 px-6 text-sm font-sans-light tracking-widest uppercase transition-all duration-300"
                     style={{
-                      border: `1px solid ${attend === val ? "hsl(345,65%,42%)" : "hsl(345,12%,20%)"}`,
-                      background: attend === val ? "hsl(345,65%,42%,0.15)" : "transparent",
-                      color: attend === val ? "hsl(345,65%,42%)" : "hsl(0,10%,55%)",
+                      border: `1px solid ${attend === val ? "hsl(345,60%,40%)" : "hsl(36,20%,80%)"}`,
+                      background: attend === val ? "hsl(345,60%,40%,0.12)" : "transparent",
+                      color: attend === val ? "hsl(345,60%,40%)" : "hsl(345,10%,38%)",
                       borderRadius: "2px",
                     }}
                   >
@@ -146,7 +144,7 @@ export const RsvpSection = () => {
               <div>
                 <label
                   className="block text-xs tracking-[0.2em] uppercase mb-2 font-sans-light"
-                  style={{ color: "hsl(345,50%,60%)" }}
+                  style={{ color: "hsl(345,50%,45%)" }}
                 >
                   Количество гостей
                 </label>
@@ -156,7 +154,7 @@ export const RsvpSection = () => {
                   style={{ ...inputStyle, cursor: "pointer" }}
                 >
                   {["1", "2", "3", "4"].map((n) => (
-                    <option key={n} value={n} style={{ background: "hsl(345,8%,18%)" }}>
+                    <option key={n} value={n} style={{ background: "hsl(36,25%,97%)" }}>
                       {n} {n === "1" ? "гость" : "гостя"}
                     </option>
                   ))}
@@ -167,7 +165,7 @@ export const RsvpSection = () => {
             <div>
               <label
                 className="block text-xs tracking-[0.2em] uppercase mb-2 font-sans-light"
-                style={{ color: "hsl(345,50%,60%)" }}
+                style={{ color: "hsl(345,50%,45%)" }}
               >
                 Пожелания молодожёнам
               </label>
@@ -178,7 +176,7 @@ export const RsvpSection = () => {
                 rows={3}
                 style={{ ...inputStyle, resize: "none" }}
                 onFocus={(e) => Object.assign(e.target.style, focusStyle)}
-                onBlur={(e) => Object.assign(e.target.style, { borderColor: "hsl(345,12%,20%)" })}
+                onBlur={(e) => Object.assign(e.target.style, { borderColor: "hsl(36,20%,80%)" })}
               />
             </div>
 
@@ -186,7 +184,7 @@ export const RsvpSection = () => {
               type="submit"
               className="w-full py-4 text-sm tracking-[0.3em] uppercase font-sans-light transition-all duration-300 hover:opacity-90 active:scale-[0.99]"
               style={{
-                background: "linear-gradient(135deg, hsl(345,70%,32%), hsl(345,65%,42%))",
+                background: "linear-gradient(135deg, hsl(345,65%,32%), hsl(345,60%,40%))",
                 color: "hsl(0,0%,97%)",
                 borderRadius: "2px",
                 fontWeight: 500,

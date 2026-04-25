@@ -77,14 +77,14 @@ export const DetailsSection = () => {
           <DetailCard
             icon="MapPin"
             label="Место"
-            value="Усадьба «Дворянское гнездо»"
-            sub="Банкетный зал «Золотой»"
+            value="Green Hall"
+            sub="Банкетная площадка"
           />
           <DetailCard
             icon="Navigation"
             label="Адрес"
-            value="ул. Парковая, 14"
-            sub="г. Москва, 30 мин от центра"
+            value="с. Устье, Центральная ул., 91"
+            sub="Ярославский р-н, Ярославская обл."
           />
         </div>
 

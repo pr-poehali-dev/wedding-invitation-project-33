@@ -72,7 +72,7 @@ export const RsvpSection = () => {
           </h2>
           <p className="font-sans-light text-sm leading-relaxed" style={{ color: "hsl(45,15%,55%)" }}>
             Пожалуйста, подтвердите своё присутствие<br />
-            до <span style={{ color: "hsl(43,74%,66%)" }}>1 июня 2025 года</span>
+            до <span style={{ color: "hsl(43,74%,66%)" }}>1 июня 2026 года</span>
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export const RsvpSection = () => {
             </h3>
             <p className="font-sans-light text-sm" style={{ color: "hsl(45,15%,55%)" }}>
               {attend === "yes"
-                ? "Спасибо! Ваш ответ принят. Увидимся 12 июля!"
+                ? "Спасибо! Ваш ответ принят. Увидимся 23 июля!"
                 : "Спасибо за ответ. Будем рады видеть вас в следующий раз!"}
             </p>
           </div>

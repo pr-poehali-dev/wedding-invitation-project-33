@@ -88,7 +88,7 @@ export const HeroSection = () => {
           className="font-serif-display font-light mb-2 leading-none"
           style={{ fontSize: "clamp(3rem, 10vw, 7rem)", color: "hsl(45,80%,90%)" }}
         >
-          Александр
+          Дмитрий
         </h1>
         <p className="font-serif-display italic" style={{ fontSize: "clamp(1.2rem, 4vw, 2rem)", color: "hsl(43,74%,66%)" }}>
           &amp;
@@ -97,13 +97,13 @@ export const HeroSection = () => {
           className="font-serif-display font-light leading-none mb-8"
           style={{ fontSize: "clamp(3rem, 10vw, 7rem)", color: "hsl(45,80%,90%)" }}
         >
-          Екатерина
+          Александра
         </h1>
 
         <div className="flex items-center gap-4 justify-center mb-8">
           <div className="h-px flex-1 max-w-16" style={{ background: "hsl(43,74%,66%)" }} />
           <p className="text-sm tracking-[0.3em] uppercase font-sans-light" style={{ color: "hsl(43,74%,66%)" }}>
-            12 июля 2025
+            23 июля 2026
           </p>
           <div className="h-px flex-1 max-w-16" style={{ background: "hsl(43,74%,66%)" }} />
         </div>

@@ -89,13 +89,13 @@ export const ContactsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           <ContactCard
-            name="Александр"
+            name="Дмитрий"
             role="Жених"
             phone="+7 (999) 123-45-67"
             whatsapp="+79991234567"
           />
           <ContactCard
-            name="Екатерина"
+            name="Александра"
             role="Невеста"
             phone="+7 (999) 765-43-21"
             whatsapp="+79997654321"
@@ -146,7 +146,7 @@ export const ContactsSection = () => {
             <div className="h-px w-12" style={{ background: "hsl(43,74%,66%,0.3)" }} />
           </div>
           <p className="mt-4 text-xs font-sans-light tracking-[0.3em] uppercase" style={{ color: "hsl(45,15%,30%)" }}>
-            12 · 07 · 2025
+            23 · 07 · 2026
           </p>
         </div>
       </div>

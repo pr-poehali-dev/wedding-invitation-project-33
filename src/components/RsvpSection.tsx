@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const RSVP_URL = "https://functions.poehali.dev/4e2173b7-1f8c-448a-8076-6abe15529b15";
+
 type AttendStatus = "yes" | "no" | null;
 
 export const RsvpSection = () => {
@@ -8,10 +10,18 @@ export const RsvpSection = () => {
   const [attend, setAttend] = useState<AttendStatus>(null);
   const [wishes, setWishes] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !attend) return;
+    setLoading(true);
+    await fetch(RSVP_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, attend, guests: parseInt(guests), wishes }),
+    });
+    setLoading(false);
     setSubmitted(true);
   };
 
@@ -182,7 +192,8 @@ export const RsvpSection = () => {
 
             <button
               type="submit"
-              className="w-full py-4 text-sm tracking-[0.3em] uppercase font-sans-light transition-all duration-300 hover:opacity-90 active:scale-[0.99]"
+              disabled={loading}
+              className="w-full py-4 text-sm tracking-[0.3em] uppercase font-sans-light transition-all duration-300 hover:opacity-90 active:scale-[0.99] disabled:opacity-60"
               style={{
                 background: "linear-gradient(135deg, hsl(345,65%,32%), hsl(345,60%,40%))",
                 color: "hsl(0,0%,97%)",
@@ -190,7 +201,7 @@ export const RsvpSection = () => {
                 fontWeight: 500,
               }}
             >
-              Отправить ответ
+              {loading ? "Отправляем..." : "Отправить ответ"}
             </button>
           </form>
         )}

@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "POST — сохранить ответ гостя",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Иван Тестов", "attend": "yes", "guests": 2, "wishes": "Совет да любовь!"},
+      "expectedStatus": 200,
+      "expectedBody": {"success": true},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "GET — получить список ответов",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial",
+      "expectedBody": {}
+    }
+  ]
+}

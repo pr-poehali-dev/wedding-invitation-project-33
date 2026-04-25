@@ -70,7 +70,7 @@ const CountdownUnit = ({ value, label }: { value: number; label: string }) => (
   <div className="flex flex-col items-center">
     <div
       className="w-16 h-16 flex items-center justify-center rounded-sm relative"
-      style={{ border: "1px solid hsl(345,65%,42%,0.4)", background: "hsl(0,0%,5%,0.6)" }}
+      style={{ border: "1px solid hsl(345,65%,42%,0.4)", background: "hsl(345,10%,14%,0.6)" }}
     >
       <span
         className="font-serif-display font-light text-2xl leading-none"
@@ -98,7 +98,7 @@ export const HeroSection = () => {
           backgroundImage: `url(https://cdn.poehali.dev/projects/3511bf90-5fe3-4e1c-ac65-0de2a3bb3975/files/99428701-e4a9-48f5-a93f-c7b9c93832c2.jpg)`,
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[hsl(0,0%,5%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[hsl(345,10%,14%)]" />
 
       <GeometricLine />
       <FloatingOrb className="w-96 h-96 bg-rose-900 top-0 right-0 translate-x-1/2 -translate-y-1/2" />

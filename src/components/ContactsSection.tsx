@@ -14,7 +14,7 @@ const ContactCard = ({
 }) => (
   <div
     className="p-6 rounded-sm border transition-all duration-300 hover:border-[hsl(345,65%,42%,0.4)]"
-    style={{ borderColor: "hsl(345,12%,16%)", background: "hsl(0,0%,8%)" }}
+    style={{ borderColor: "hsl(345,12%,16%)", background: "hsl(345,8%,17%)" }}
   >
     <div className="flex items-start gap-4">
       <div
@@ -63,7 +63,7 @@ export const ContactsSection = () => {
   return (
     <section
       className="relative py-24 overflow-hidden"
-      style={{ background: "hsl(0,0%,7%)" }}
+      style={{ background: "hsl(345,8%,16%)" }}
     >
       <div className="absolute top-0 left-0 w-full h-px" style={{ background: "linear-gradient(90deg, transparent, hsl(345,65%,42%), transparent)" }} />
 
@@ -104,7 +104,7 @@ export const ContactsSection = () => {
 
         <div
           className="p-6 rounded-sm border text-center"
-          style={{ borderColor: "hsl(345,12%,16%)", background: "hsl(0,0%,8%)" }}
+          style={{ borderColor: "hsl(345,12%,16%)", background: "hsl(345,8%,17%)" }}
         >
           <p className="text-xs tracking-[0.3em] uppercase mb-1 font-sans-light" style={{ color: "hsl(345,40%,55%)" }}>
             Организатор свадьбы

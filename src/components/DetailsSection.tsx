@@ -42,7 +42,7 @@ const DetailCard = ({ icon, label, value, sub }: DetailCardProps) => (
 
 export const DetailsSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden" style={{ background: "hsl(0,0%,5%)" }}>
+    <section className="relative py-24 overflow-hidden" style={{ background: "hsl(345,10%,14%)" }}>
       <div className="absolute inset-0 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
           <rect x="0" y="0" width="1200" height="600" fill="none" />

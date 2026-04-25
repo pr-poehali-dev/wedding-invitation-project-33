@@ -56,7 +56,7 @@ export const ProgramSection = () => {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 overflow-hidden" style={{ background: "hsl(0,0%,7%)" }}>
+    <section className="relative py-24 overflow-hidden" style={{ background: "hsl(345,8%,16%)" }}>
       <div className="absolute top-0 left-0 w-full h-px" style={{ background: "linear-gradient(90deg, transparent, hsl(345,65%,42%), transparent)" }} />
       <div className="absolute bottom-0 left-0 w-full h-px" style={{ background: "linear-gradient(90deg, transparent, hsl(345,65%,42%), transparent)" }} />
 
@@ -101,7 +101,7 @@ export const ProgramSection = () => {
                       className="p-5 rounded-sm border transition-all duration-300"
                       style={{
                         borderColor: isActive ? "hsl(345,65%,42%)" : "hsl(345,12%,20%)",
-                        background: isActive ? "hsl(345,65%,42%,0.06)" : "hsl(0,0%,9%)",
+                        background: isActive ? "hsl(345,65%,42%,0.06)" : "hsl(345,8%,18%)",
                       }}
                     >
                       <div className={`flex items-center gap-3 mb-2 ${isEven ? "md:justify-end" : ""}`}>
@@ -136,7 +136,7 @@ export const ProgramSection = () => {
                   <div
                     className="hidden md:flex absolute left-1/2 -translate-x-1/2 top-6 items-center justify-center w-3 h-3 rounded-full z-10"
                     style={{
-                      background: isActive ? "hsl(345,65%,42%)" : "hsl(0,0%,5%)",
+                      background: isActive ? "hsl(345,65%,42%)" : "hsl(345,10%,14%)",
                       border: "2px solid hsl(345,65%,42%)",
                       boxShadow: isActive ? "0 0 12px hsl(345,65%,42%,0.5)" : "none",
                     }}

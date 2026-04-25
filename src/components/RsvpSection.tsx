@@ -16,7 +16,7 @@ export const RsvpSection = () => {
   };
 
   const inputStyle: React.CSSProperties = {
-    background: "hsl(0,0%,9%)",
+    background: "hsl(345,8%,18%)",
     border: "1px solid hsl(345,12%,20%)",
     borderRadius: "2px",
     color: "hsl(45,30%,92%)",
@@ -36,7 +36,7 @@ export const RsvpSection = () => {
   return (
     <section
       className="relative py-24 overflow-hidden"
-      style={{ background: "hsl(0,0%,5%)" }}
+      style={{ background: "hsl(345,10%,14%)" }}
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
@@ -156,7 +156,7 @@ export const RsvpSection = () => {
                   style={{ ...inputStyle, cursor: "pointer" }}
                 >
                   {["1", "2", "3", "4"].map((n) => (
-                    <option key={n} value={n} style={{ background: "hsl(0,0%,9%)" }}>
+                    <option key={n} value={n} style={{ background: "hsl(345,8%,18%)" }}>
                       {n} {n === "1" ? "гость" : "гостя"}
                     </option>
                   ))}

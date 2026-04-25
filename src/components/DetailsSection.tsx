@@ -88,17 +88,7 @@ export const DetailsSection = () => {
           />
         </div>
 
-        <div
-          className="mt-12 p-6 text-center rounded-sm"
-          style={{ border: "1px solid hsl(345,60%,40%,0.2)", background: "hsl(345,60%,40%,0.04)" }}
-        >
-          <Icon name="Car" size={18} className="text-gold inline-block mb-2" />
-          <p className="font-sans-light text-sm leading-relaxed" style={{ color: "hsl(345,10%,35%)" }}>
-            Для гостей организован трансфер от станции метро Чистые пруды.
-            <br />
-            Автобус отправляется в 15:00, 15:20 и 15:40.
-          </p>
-        </div>
+
       </div>
     </section>
   );

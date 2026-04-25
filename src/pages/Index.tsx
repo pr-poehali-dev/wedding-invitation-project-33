@@ -3,8 +3,8 @@ import { HeroSection } from "@/components/HeroSection";
 import { DetailsSection } from "@/components/DetailsSection";
 import { ProgramSection } from "@/components/ProgramSection";
 import { DressCodeSection } from "@/components/DressCodeSection";
+import { WishesSection } from "@/components/WishesSection";
 import { RsvpSection } from "@/components/RsvpSection";
-import { ContactsSection } from "@/components/ContactsSection";
 
 const Index = () => {
   return (
@@ -13,8 +13,8 @@ const Index = () => {
       <DetailsSection />
       <ProgramSection />
       <DressCodeSection />
+      <WishesSection />
       <RsvpSection />
-      <ContactsSection />
     </main>
   );
 };

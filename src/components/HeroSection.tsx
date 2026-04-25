@@ -53,14 +53,14 @@ export const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(https://cdn.poehali.dev/projects/3511bf90-5fe3-4e1c-ac65-0de2a3bb3975/files/9a467ae4-bd73-4ca3-977e-35b60cc3f333.jpg)`,
+          backgroundImage: `url(https://cdn.poehali.dev/projects/3511bf90-5fe3-4e1c-ac65-0de2a3bb3975/files/99428701-e4a9-48f5-a93f-c7b9c93832c2.jpg)`,
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[hsl(0,0%,5%)]" />
 
       <GeometricLine />
-      <FloatingOrb className="w-96 h-96 bg-amber-400 top-0 right-0 translate-x-1/2 -translate-y-1/2" />
-      <FloatingOrb className="w-72 h-72 bg-amber-600 bottom-0 left-0 -translate-x-1/2 translate-y-1/2" />
+      <FloatingOrb className="w-96 h-96 bg-rose-900 top-0 right-0 translate-x-1/2 -translate-y-1/2" />
+      <FloatingOrb className="w-72 h-72 bg-red-950 bottom-0 left-0 -translate-x-1/2 translate-y-1/2" />
 
       <FlowerDecor top="8%" left="5%" size={50} delay={0} />
       <FlowerDecor top="10%" left="88%" size={40} delay={1.5} />

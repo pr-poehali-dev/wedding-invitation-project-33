@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const FloatingOrb = ({ className }: { className: string }) => (
   <div className={`absolute rounded-full blur-3xl opacity-20 ${className}`} />
@@ -47,7 +47,49 @@ const FlowerDecor = ({ top, left, size = 60, delay = 0 }: { top: string; left: s
   </svg>
 );
 
+const useCountdown = (targetDate: string) => {
+  const calculate = () => {
+    const diff = new Date(targetDate).getTime() - Date.now();
+    if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    return {
+      days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((diff / (1000 * 60)) % 60),
+      seconds: Math.floor((diff / 1000) % 60),
+    };
+  };
+  const [time, setTime] = useState(calculate);
+  useEffect(() => {
+    const id = setInterval(() => setTime(calculate()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return time;
+};
+
+const CountdownUnit = ({ value, label }: { value: number; label: string }) => (
+  <div className="flex flex-col items-center">
+    <div
+      className="w-16 h-16 flex items-center justify-center rounded-sm relative"
+      style={{ border: "1px solid hsl(345,65%,42%,0.4)", background: "hsl(0,0%,5%,0.6)" }}
+    >
+      <span
+        className="font-serif-display font-light text-2xl leading-none"
+        style={{ color: "hsl(345,65%,42%)" }}
+      >
+        {String(value).padStart(2, "0")}
+      </span>
+    </div>
+    <span
+      className="mt-2 text-[10px] tracking-[0.25em] uppercase font-sans-light"
+      style={{ color: "hsl(0,10%,45%)" }}
+    >
+      {label}
+    </span>
+  </div>
+);
+
 export const HeroSection = () => {
+  const countdown = useCountdown("2026-07-23T16:00:00");
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
@@ -117,7 +159,25 @@ export const HeroSection = () => {
           этот особенный день вместе с нами
         </p>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex items-center gap-3 justify-center">
+          <div className="h-px flex-1 max-w-12" style={{ background: "hsl(345,65%,42%,0.3)" }} />
+          <p className="text-xs tracking-[0.3em] uppercase font-sans-light" style={{ color: "hsl(0,10%,45%)" }}>
+            до свадьбы осталось
+          </p>
+          <div className="h-px flex-1 max-w-12" style={{ background: "hsl(345,65%,42%,0.3)" }} />
+        </div>
+
+        <div className="mt-5 flex items-start justify-center gap-4">
+          <CountdownUnit value={countdown.days} label="дней" />
+          <span className="font-serif-display text-2xl mt-3" style={{ color: "hsl(345,65%,42%,0.5)" }}>:</span>
+          <CountdownUnit value={countdown.hours} label="часов" />
+          <span className="font-serif-display text-2xl mt-3" style={{ color: "hsl(345,65%,42%,0.5)" }}>:</span>
+          <CountdownUnit value={countdown.minutes} label="минут" />
+          <span className="font-serif-display text-2xl mt-3" style={{ color: "hsl(345,65%,42%,0.5)" }}>:</span>
+          <CountdownUnit value={countdown.seconds} label="секунд" />
+        </div>
+
+        <div className="mt-10 flex justify-center">
           <div className="w-px h-16" style={{ background: "linear-gradient(to bottom, hsl(345,65%,42%), transparent)" }} />
         </div>
       </div>
